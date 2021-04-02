@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta name="description" content="Choreographic code by Joana Chicau & Renee Carmichael ">
+  	<meta name="keywords" content="design, media design, graphic design, choreography, physical, digital, web, creative coding, choreographic thinking, performance  | Joana Chicau & Renee Carmichael ">
+  	<meta name="author" content="Joana Chicau & Renee Carmichael ">
+    <title>flows = FROMMETOYOU();MYSCREENTOYOURS();</title>
+
+
+<style type="text/css">
+body {
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f5c6ff+0,eaeaea+15,eaeaea+93,c6fffa+100 */
+background: #f5c6ff; /* Old browsers */
+background: -moz-linear-gradient(top,  #f5c6ff 0%, #eaeaea 15%, #eaeaea 93%, #c6fffa 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #f5c6ff 0%,#eaeaea 15%,#eaeaea 93%,#c6fffa 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #f5c6ff 0%,#eaeaea 15%,#eaeaea 93%,#c6fffa 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5c6ff', endColorstr='#c6fffa',GradientType=0 ); /* IE6-9 */
+background-repeat: no-repeat;
+height: 100vh;
+width: auto;
+}
+
+h1, h3 {
+	font-family: monospace;
+	text-shadow: 2px 2px 5px #EAEAEA;
+	text-align: center;
+}
+h1 span {
+	letter-spacing: 1.4vw;	
+}
+
+iframe {
+	position: absolute;
+  	left: 50%;
+  	top: 50%;
+	transform: translate(-50%, -50%);
+	}
+#pad{
+	opacity: 0.5;
+
+}
+#jitsi{
+	opacity: 0.3;
+	z-index: 98;
+}
+.reposition {
+	z-index: 99;
+}
+button {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin: 2px;
+}
+</style>
+
+
+
+</style>    
+</head>
+<body>
+
+	<h1>flows = <span> FROMMETOYOU();MYSCREENTOYOURS(); </span></h1>
+	<h3>a < network > preformance by Joana Chicau & Renee Carmichael </h3>
+
+	<iframe id="pad" class="" src="https://cryptpad.fr/pad/#/3/pad/edit/4159c2fa79f1d02afe1176f606d33b19/" width="1200" height="650"  frameborder="0" ></iframe>
+
+ 
+    <iframe id="jitsi" class="resize-drag" src="https://meet.jit.si/FROMMETOYOU_MYSCREENTOYOURS" allow="camera; microphone" width="1400" height="680" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe> 
+
+    <button onclick="pos()">( ⇆ )</button>
+
+	<script type="text/javascript">
+		  function pos() {
+	     var element = document.getElementById("pad");
+	     element.classList.toggle("reposition");
+	  }
+
+	</script>
+</body>
+</html>
