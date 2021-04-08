@@ -11,26 +11,36 @@
 
 <style type="text/css">
 body {
-/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f5c6ff+0,eaeaea+15,eaeaea+93,c6fffa+100 */
-background: #f5c6ff; /* Old browsers */
-background: -moz-linear-gradient(top,  #f5c6ff 0%, #eaeaea 15%, #eaeaea 93%, #c6fffa 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  #f5c6ff 0%,#eaeaea 15%,#eaeaea 93%,#c6fffa 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom,  #f5c6ff 0%,#eaeaea 15%,#eaeaea 93%,#c6fffa 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5c6ff', endColorstr='#c6fffa',GradientType=0 ); /* IE6-9 */
-background-repeat: no-repeat;
-height: 100vh;
-width: auto;
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f5c6ff+0,eaeaea+15,eaeaea+93,c6fffa+100 */
+	background: #f5c6ff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #f5c6ff 0%, #eaeaea 15%, #eaeaea 93%, #c6fffa 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #f5c6ff 0%,#eaeaea 15%,#eaeaea 93%,#c6fffa 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #f5c6ff 0%,#eaeaea 15%,#eaeaea 93%,#c6fffa 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5c6ff', endColorstr='#c6fffa',GradientType=0 ); /* IE6-9 */
+	background-repeat: no-repeat;
+	height: 100vh;
+	width: auto;
 }
 
-h1, h3 {
+h1 {
 	font-family: monospace;
 	text-shadow: 2px 2px 5px #EAEAEA;
 	text-align: center;
+	writing-mode: vertical-lr;
+	text-orientation: upright;
 }
-h1 span {
-	letter-spacing: 1.4vw;	
+.subtitle{
+	position: fixed;
+  	right: 0;
+  	top: 0;
 }
-
+h3 {
+	padding-right: 20px;
+	font-family: monospace;
+	text-shadow: 2px 2px 5px #EAEAEA;
+	text-align: right;
+	line-height: 16px;
+}
 iframe {
 	position: absolute;
   	left: 50%;
@@ -38,8 +48,7 @@ iframe {
 	transform: translate(-50%, -50%);
 	}
 #pad{
-	opacity: 0.5;
-
+	opacity: 0.6;
 }
 #jitsi{
 	opacity: 0.3;
@@ -53,6 +62,7 @@ button {
 	bottom: 0;
 	right: 0;
 	margin: 2px;
+	border: none;
 }
 </style>
 
@@ -61,11 +71,13 @@ button {
 </style>    
 </head>
 <body>
+	<div class="subtitle">
+	<h3>a < <br>  < network > <br> > performance <br> by Joana Chicau < <br> & Renee Carmichael < </h3>
+	</div>
 
-	<h1>flows = <span> FROMMETOYOU();MYSCREENTOYOURS(); </span></h1>
-	<h3>a < network > preformance by Joana Chicau & Renee Carmichael </h3>
+	<h1>flows =  FROMMETOYOU();MYSCREENTOYOURS(); </h1>
 
-	<iframe id="pad" class="" src="https://cryptpad.fr/pad/#/3/pad/edit/4159c2fa79f1d02afe1176f606d33b19/" width="1200" height="650"  frameborder="0" ></iframe>
+	<iframe id="pad" class="" src="https://cryptpad.fr/pad/#/2/pad/edit/Ky4Q-KjtUvN-WwazvXCA1zFQ/embed/" width="1200" height="900"  frameborder="0" ></iframe>
 
  
     <iframe id="jitsi" class="resize-drag" src="https://meet.jit.si/FROMMETOYOU_MYSCREENTOYOURS" allow="camera; microphone" width="1400" height="680" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe> 
@@ -78,6 +90,14 @@ button {
 	     element.classList.toggle("reposition");
 	  }
 
+
+// var iframe = document.querySelector("#pad");
+// var elmnt = iframe.contentWindow.document.querySelector("#cp-app-pad-toolbar");
+// elmnt.style.display = "none"; 
+
+
+// var el = document.querySelector('#pad').contentWindow.document.querySelector('#cp-app-pad-toolbar');
+// el.style.display = "none";
 	</script>
 </body>
 </html>
