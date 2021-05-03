@@ -64,6 +64,17 @@ button {
 	margin: 2px;
 	border: none;
 }
+
+#show {
+	position: absolute;
+	top: 0;
+	opacity: 0.5;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+}
+
+
 </style>
 
 
@@ -82,7 +93,10 @@ button {
  
     <iframe id="jitsi" class="resize-drag" src="https://meet.jit.si/FROMMETOYOU_MYSCREENTOYOURS" allow="camera; microphone" width="1400" height="680" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe> 
 
+    <div id="show">     </div>
+
     <button onclick="pos()">( ⇆ )</button>
+
 
 	<script type="text/javascript">
 		  function pos() {
@@ -90,6 +104,31 @@ button {
 	     element.classList.toggle("reposition");
 	  }
 
+
+	var ele = document.getElementById ('show') ;
+
+	 var fileNames = [
+
+	    // add images to the list here @Renee 
+
+	    "https://d2w9rnfcy7mm78.cloudfront.net/8022682/original_7d0a8d2000b0eb6b53a6f12e02514df7.gif",
+	    "https://d2w9rnfcy7mm78.cloudfront.net/8018899/original_9dddb68f270891c15f2be30e31ad311a.png",
+	    "https://d2w9rnfcy7mm78.cloudfront.net/8018688/original_03a16221e4f8e569a55d6caeaf88a372.png",
+	    "https://d2w9rnfcy7mm78.cloudfront.net/8018793/original_5f81a571f9c2a8e4e6c6598830270c71.png",
+	    "https://d2w9rnfcy7mm78.cloudfront.net/8018978/original_42cf7e273413c5ae0d1354436937bc63.png",
+	    "https://d2w9rnfcy7mm78.cloudfront.net/10208264/original_239d0ffc652a4eec776bad1ad30fc69f.gif",
+	    "https://d2w9rnfcy7mm78.cloudfront.net/8019150/original_da8d52e98c80f23364e47d928d2fb740.png",
+	    "https://d2w9rnfcy7mm78.cloudfront.net/8019062/original_c1397cc504d790a43153b66248b17be2.png",
+		"https://d2w9rnfcy7mm78.cloudfront.net/10208302/original_d734ae0a35889e70920c21304f600f8c.gif"
+	];
+
+	function randomImage() {
+	  var randomIndex = Math.floor(Math.random() * fileNames.length);
+	  ele.style.backgroundImage = 'url(' + fileNames[randomIndex] + ')' ;
+	}
+
+	randomImage() ;
+	setInterval(randomImage, 5000) ;
 
 // var iframe = document.querySelector("#pad");
 // var elmnt = iframe.contentWindow.document.querySelector("#cp-app-pad-toolbar");
