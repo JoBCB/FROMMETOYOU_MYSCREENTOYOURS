@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta name="description" content="Choreographic code by Joana Chicau & Renee Carmichael ">
+  	<meta name="keywords" content="design, media design, graphic design, choreography, physical, digital, web, creative coding, choreographic thinking, performance  | Joana Chicau & Renee Carmichael ">
+  	<meta name="author" content="Joana Chicau & Renee Carmichael ">
+    <title>flows = FROMMETOYOU();MYSCREENTOYOURS();</title>
+
+
+<style type="text/css">
+body {
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f5c6ff+0,eaeaea+15,eaeaea+93,c6fffa+100 */
+	background: #f5c6ff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #f5c6ff 0%, #eaeaea 15%, #eaeaea 93%, #c6fffa 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #f5c6ff 0%,#eaeaea 15%,#eaeaea 93%,#c6fffa 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #f5c6ff 0%,#eaeaea 15%,#eaeaea 93%,#c6fffa 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5c6ff', endColorstr='#c6fffa',GradientType=0 ); /* IE6-9 */
+	background-repeat: no-repeat;
+	height: 100vh;
+	width: auto;
+}
+
+h1 {
+	font-family: monospace;
+	text-shadow: 2px 2px 5px #EAEAEA;
+	text-align: center;
+	writing-mode: vertical-lr;
+	text-orientation: upright;
+}
+.subtitle{
+	position: fixed;
+  	right: 0;
+  	top: 0;
+}
+h3 {
+	padding-right: 20px;
+	font-family: monospace;
+	text-shadow: 2px 2px 5px #EAEAEA;
+	text-align: right;
+	line-height: 16px;
+}
+iframe {
+	position: absolute;
+  	left: 50%;
+  	top: 50%;
+	transform: translate(-50%, -50%);
+	}
+#pad{
+	opacity: 0.6;
+}
+#jitsi{
+	opacity: 0.3;
+	z-index: 98;
+}
+.reposition {
+	z-index: 99;
+}
+#click {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin: 2px;
+	z-index: 100;
+}
+
+button {
+	border: none;
+	cursor: move;
+}
+
+
+#show {
+	position: absolute;
+	top: 0;
+	opacity: 0.5;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+}
+
+#show {
+	position: absolute;
+	top: 25%;
+	opacity: 0;
+	width: 100%;
+	max-width: 200px;
+	height: auto;
+	z-index: 101;
+}
+
+
+</style>
+
+
+
+</style>    
+</head>
+<body>
+	<div class="subtitle">
+	<h3>a < <br>  < network > <br> > performance <br> by Joana Chicau < <br> & Renee Carmichael < </h3>
+	</div>
+
+	<h1>flows =  FROMMETOYOU();MYSCREENTOYOURS(); </h1>
+
+<!-- 	<iframe id="pad" class="" src="https://cryptpad.fr/pad/#/2/pad/edit/Ky4Q-KjtUvN-WwazvXCA1zFQ/embed/" width="1200" height="900"  frameborder="0" ></iframe>
+
+ 
+    <iframe id="jitsi" class="resize-drag" src="https://meet.jit.si/FROMMETOYOU_MYSCREENTOYOURS" allow="camera; microphone" width="1400" height="680" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe> 
+ -->
+    <div id="show">    </div> 
+
+    <div id="keywords">    </div> 
+
+
+    <div id="click"> 
+    	<button onclick="pos()">{  frontstage }</button>
+
+    	<button onclick="move()">{ move not move }</button>
+
+	</div>
+
+	<script type="text/javascript">
+	function pos() {
+	     var element = document.getElementById("pad");
+	     element.classList.toggle("reposition");
+	  }
+
+
+	var ele = document.getElementById ('show') ;
+
+	 var fileNames = [
+
+	    // add images to the list here @Renee
+	    "https://flows-from-me-to-you.s3-eu-west-1.amazonaws.com/x.gif",
+	    "https://flows-from-me-to-you.s3-eu-west-1.amazonaws.com/waves.gif",
+	    "https://flows-from-me-to-you.s3-eu-west-1.amazonaws.com/fool-scrolling.gif",
+	    "https://flows-from-me-to-you.s3-eu-west-1.amazonaws.com/Screen+Shot+2021-05-18+at+12.56.49.png",
+	    "https://flows-from-me-to-you.s3-eu-west-1.amazonaws.com/hands.gif",
+	    "https://flows-from-me-to-you.s3-eu-west-1.amazonaws.com/9.jpg",
+	    "https://flows-from-me-to-you.s3-eu-west-1.amazonaws.com/we-here-body+copy.png", 
+	    "https://flows-from-me-to-you.s3-eu-west-1.amazonaws.com/ai.png",
+	    "https://flows-from-me-to-you.s3-eu-west-1.amazonaws.com/3-4.jpg",
+	    "https://d2w9rnfcy7mm78.cloudfront.net/8022682/original_7d0a8d2000b0eb6b53a6f12e02514df7.gif",
+	    "https://d2w9rnfcy7mm78.cloudfront.net/8018899/original_9dddb68f270891c15f2be30e31ad311a.png",
+	    "https://d2w9rnfcy7mm78.cloudfront.net/8018688/original_03a16221e4f8e569a55d6caeaf88a372.png",
+	    "https://d2w9rnfcy7mm78.cloudfront.net/8018793/original_5f81a571f9c2a8e4e6c6598830270c71.png",
+	    "https://d2w9rnfcy7mm78.cloudfront.net/8018978/original_42cf7e273413c5ae0d1354436937bc63.png",
+	    "https://d2w9rnfcy7mm78.cloudfront.net/10208264/original_239d0ffc652a4eec776bad1ad30fc69f.gif",
+	    "https://d2w9rnfcy7mm78.cloudfront.net/8019150/original_da8d52e98c80f23364e47d928d2fb740.png",
+	    "https://d2w9rnfcy7mm78.cloudfront.net/8019062/original_c1397cc504d790a43153b66248b17be2.png",
+		"https://d2w9rnfcy7mm78.cloudfront.net/10208302/original_d734ae0a35889e70920c21304f600f8c.gif"
+	];
+
+
+	function bgRandom() {
+	  	var randomIndex = Math.floor(Math.random() * fileNames.length);
+	  	ele.style.backgroundImage = 'url(' + fileNames[randomIndex] + ')' ;
+	}
+
+	var interval;
+
+	function move() {
+	 	if (!interval) {	
+	 	interval = setInterval(bgRandom, 5000);
+	 	document.querySelector("#show").style.visibility="initial";
+		}
+		else {
+    	clearInterval(interval);
+    	interval = null;
+    	document.querySelector("#show").style.visibility="hidden";
+  		}
+	}
+
+
+// var iframe = document.querySelector("#pad");
+// var elmnt = iframe.contentWindow.document.querySelector("#cp-app-pad-toolbar");
+// elmnt.style.display = "none"; 
+
+
+// var el = document.querySelector('#pad').contentWindow.document.querySelector('#cp-app-pad-toolbar');
+// el.style.display = "none";
+	</script>
+</body>
+</html>
